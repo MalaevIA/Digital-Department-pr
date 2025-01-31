@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.myitschool.lab23">
+    package="ru.myitschool.lab23"
+    >
 
-    <application>
+    <application
+        android:theme="@style/Theme.Lab21"
+        android:label="@string/app_name"
+        >
+
+        <!-- Главная (стартовая) активность -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Вторая активность -->
+        <activity android:name=".GeneratedListActivity" />
     </application>
 
 </manifest>
