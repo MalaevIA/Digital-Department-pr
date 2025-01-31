@@ -2,39 +2,56 @@ package ru.myitschool.lab22toast;
 
 import android.os.Bundle;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import ru.myitschool.lab22toast.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
+    private static final String DESTROY_COUNT_KEY = "destroy_count";
+    private int destroyCount = 0;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "ncreate", Toast.LENGTH_SHORT).show();
+
+        // Восстановление состояния при повороте экрана
+        if (savedInstanceState != null) {
+            destroyCount = savedInstanceState.getInt(DESTROY_COUNT_KEY, 0);
+        }
+
+        showToast(R.string.ncreate);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "nstart", Toast.LENGTH_SHORT).show();
+        showToast(R.string.nstart);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Toast.makeText(this, "nresume", Toast.LENGTH_SHORT).show();
+        showToast(R.string.nresume);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this, "ndestroy", Toast.LENGTH_SHORT).show();
+        destroyCount++;
+        if (destroyCount % 2 == 0) {
+            showToast(R.string.ndestroy);
+        }
+    }
+
+    private void showToast(int resId) {
+        Toast.makeText(this, getString(resId), Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(DESTROY_COUNT_KEY, destroyCount);
     }
 }
+

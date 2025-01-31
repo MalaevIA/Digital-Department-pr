@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Lab22Toast</string>
-
+    <string name="ncreate">Activity CREATED</string>
+    <string name="nstart">Activity STARTED</string>
+    <string name="nresume">Activity RESUMED</string>
+    <string name="npause">Activity PAUSED</string>
+    <string name="nstop">Activity STOPPED</string>
+    <string name="nrestart">Activity RESTARTED</string>
+    <string name="ndestroy">Activity DESTROYED</string>
 </resources>
