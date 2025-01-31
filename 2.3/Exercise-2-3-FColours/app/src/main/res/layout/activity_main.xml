@@ -2,14 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/activity_layout"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/main_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/black"
@@ -28,80 +28,109 @@
         android:layout_weight="1"
         android:orientation="vertical">
         <View
+            android:id="@+id/white"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/red"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/red"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/red" />
+
         <View
+            android:id="@+id/white_2"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/orange"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/orange"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/orange" />
+
         <View
+            android:id="@+id/white_3"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/yellow"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/yellow"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/yellow" />
+
         <View
+            android:id="@+id/white_4"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/green"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/green"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/green" />
+
         <View
+            android:id="@+id/white_5"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/azure"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/azure"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/azure" />
+
         <View
+            android:id="@+id/white_6"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/blue"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/blue"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/blue" />
+
         <View
+            android:id="@+id/white_7"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
+
         <View
+            android:id="@+id/violet"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/violet"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/violet" />
+
         <View
+            android:id="@+id/white_8"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/white"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@color/white" />
     </LinearLayout>
 
 
