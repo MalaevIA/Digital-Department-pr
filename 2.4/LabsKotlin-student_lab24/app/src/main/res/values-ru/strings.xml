@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Лаб24</string>
+    <string-array name = "text_view_captions">
+        <item>Дюйм</item>
+        <item>Ярд</item>
+        <item>Фут</item>
+        <item>Миля</item>
+        <item>Иоттаметр</item>
+        <item>Зеттаметр</item>
+        <item>Эксаметр</item>
+        <item>Петаметр</item>
+        <item>Тераметр</item>
+        <item>Гигаметр</item>
+        <item>Мегаметр</item>
+        <item>Километр</item>
+        <item>Гектометр</item>
+        <item>Декаметр</item>
+        <item>Метр</item>
+        <item>Дециметр</item>
+        <item>Сантиметр</item>
+        <item>Миллиметр</item>
+        <item>Микрометр</item>
+        <item>Нанометр</item>
+        <item>Пикометр</item>
+        <item>Фемтометр</item>
+        <item>Аттометр</item>
+        <item>Зептометр</item>
+        <item>Иоктометр</item>
+    </string-array>
+<!--    <string name="app_name" translatable="false">Лаб24</string>-->
+<!--    <string name="inch">Дюйм</string>-->
+<!--    <string name="yard">Ярд</string>-->
+<!--    <string name="foot">Фут</string>-->
+<!--    <string name="mile">Миля</string>-->
+<!--    <string name="yottametre">Иоттаметр</string>-->
+<!--    <string name="zettametre">Зеттаметр</string>-->
+<!--    <string name="exametre">Эксаметр</string>-->
+<!--    <string name="petametre">Петаметр</string>-->
+<!--    <string name="terametre">Тераметр</string>-->
+<!--    <string name="gigametre">Гигаметр</string>-->
+<!--    <string name="megametre">Мегаметр</string>-->
+<!--    <string name="kilometre">Километр</string>-->
+<!--    <string name="hectometre">Гектометр</string>-->
+<!--    <string name="decametre">Декаметр</string>-->
+<!--    <string name="metre">Метр</string>-->
+<!--    <string name="decimetre">Дециметр</string>-->
+<!--    <string name="centimetre">Сантиметр</string>-->
+<!--    <string name="millimetre">Миллиметр</string>-->
+<!--    <string name="micrometre">Микрометр</string>-->
+<!--    <string name="nanometre">Нанометр</string>-->
+<!--    <string name="picometre">Пикометр</string>-->
+<!--    <string name="femtometre">Фемтометр</string>-->
+<!--    <string name="attometre">Аттометр</string>-->
+<!--    <string name="zeptometre">Зептометр</string>-->
+<!--    <string name="yoctometre">Иоктометр</string>-->
+</resources>

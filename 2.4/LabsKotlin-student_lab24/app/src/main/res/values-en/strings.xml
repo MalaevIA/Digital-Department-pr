@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Lab24</string>
+    <string-array name = "text_view_captions">
+        <item>Inches</item>
+        <item>Yards</item>
+        <item>Feet</item>
+        <item>Miles</item>
+        <item>Yottametres</item>
+        <item>Zettametres</item>
+        <item>Exametres</item>
+        <item>Petametres</item>
+        <item>Terametres</item>
+        <item>Gigametres</item>
+        <item>Megametres</item>
+        <item>Kilometres</item>
+        <item>Hectometres</item>
+        <item>Decametres</item>
+        <item>Metres</item>
+        <item>Decimetres</item>
+        <item>Centimetres</item>
+        <item>Millimetres</item>
+        <item>Micrometres</item>
+        <item>Nanometres</item>
+        <item>Picometres</item>
+        <item>Femtometres</item>
+        <item>Attometres</item>
+        <item>Zeptometres</item>
+        <item>Yoctometres</item>
+    </string-array>
+<!--    <string name="inch">Inches</string>-->
+<!--    <string name="yard">Yards</string>-->
+<!--    <string name="foot">Feet</string>-->
+<!--    <string name="mile">Miles</string>-->
+<!--    <string name="yottametre">Yottametres</string>-->
+<!--    <string name="zettametre">Zettametres</string>-->
+<!--    <string name="exametre">Exametres</string>-->
+<!--    <string name="petametre">Petametres</string>-->
+<!--    <string name="terametre">Terametres</string>-->
+<!--    <string name="gigametre">Gigametres</string>-->
+<!--    <string name="megametre">Megametres</string>-->
+<!--    <string name="kilometre">Kilometres</string>-->
+<!--    <string name="hectometre">Hectometres</string>-->
+<!--    <string name="decametre">Decametres</string>-->
+<!--    <string name="metre">Metres</string>-->
+<!--    <string name="decimetre">Decimetres</string>-->
+<!--    <string name="centimetre">Centimetres</string>-->
+<!--    <string name="millimetre">Millimetres</string>-->
+<!--    <string name="micrometre">Micrometres</string>-->
+<!--    <string name="nanometre">Nanometres</string>-->
+<!--    <string name="picometre">Picometres</string>-->
+<!--    <string name="femtometre">Femtometres</string>-->
+<!--    <string name="attometre">Attometres</string>-->
+<!--    <string name="zeptometre">Zeptometres</string>-->
+<!--    <string name="yoctometre">Yoctometres</string>-->
+</resources>
