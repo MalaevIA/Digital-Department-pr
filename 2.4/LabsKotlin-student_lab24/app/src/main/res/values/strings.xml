@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name" translatable="false">Lab24</string>
-
+    <string-array name = "text_view_captions">
+        <item>Inches</item>
+        <item>Yards</item>
+        <item>Feet</item>
+        <item>Miles</item>
+        <item>Yottametres</item>
+        <item>Zettametres</item>
+        <item>Exametres</item>
+        <item>Petametres</item>
+        <item>Terametres</item>
+        <item>Gigametres</item>
+        <item>Megametres</item>
+        <item>Kilometres</item>
+        <item>Hectometres</item>
+        <item>Decametres</item>
+        <item>Metres</item>
+        <item>Decimetres</item>
+        <item>Centimetres</item>
+        <item>Millimetres</item>
+        <item>Micrometres</item>
+        <item>Nanometres</item>
+        <item>Picometres</item>
+        <item>Femtometres</item>
+        <item>Attometres</item>
+        <item>Zeptometres</item>
+        <item>Yoctometres</item>
+    </string-array>
 </resources>
