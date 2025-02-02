@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         val container = binding.container.outerLayout
         val units = metricsData.getFilteredUnits()
+        val etIds = metricsData.convertToEtId("")
 
-        for (unit in units) {
-            // Создаём горизонтальный контейнер для TextView и EditText
+        units.forEachIndexed { index, unit ->
             val rowLayout = LinearLayout(this).apply {
                 orientation = LinearLayout.HORIZONTAL
                 layoutParams = LinearLayout.LayoutParams(
@@ -59,11 +59,13 @@ class MainActivity : AppCompatActivity() {
             val editText = EditText(this).apply {
                 hint = "Enter value"
                 textSize = 9f
+
                 layoutParams = LinearLayout.LayoutParams(
-                    0, 
+                    0,
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     1f
                 )
+
                 setBackgroundColor(resources.getColor(white))
                 addTextChangedListener(object : TextWatcher {
                     override fun afterTextChanged(s: Editable?) {
@@ -75,6 +77,10 @@ class MainActivity : AppCompatActivity() {
                     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
                 })
             }
+
+            val resId = resources.getIdentifier(etIds[index], "id", packageName)
+            editText.id = resId
+
             textView.setOnClickListener {
                 copyToClipboard(editText.text.toString())
             }
@@ -86,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             container.addView(rowLayout)
         }
     }
+
 
     private fun updateValues(input: String) {
         if (input.isEmpty()) return

@@ -6,7 +6,7 @@ import kotlin.math.pow
 
 class MetricsData(context: Context, private val lower: Int, private val upper: Int) {
 
-    private val units: List<String> = context.resources.getStringArray(R.array.text_view_captions).toList()
+    protected val units: List<String> = context.resources.getStringArray(R.array.text_view_captions).toList()
     private val ten : Double = 10.0
     private val conversionFactors = mapOf(
         "Metres" to 1.0,
@@ -35,7 +35,33 @@ class MetricsData(context: Context, private val lower: Int, private val upper: I
         "Zeptometres" to ten.pow(21),
         "Yoctometres" to ten.pow(24)
     )
-
+    private val etId = mapOf(
+        "Metres" to "et_metre",
+        "Inches" to "et_inch",
+        "Feet" to "et_foot",
+        "Yards" to "et_yard",
+        "Miles" to "et_mile",
+        "Yottametres" to "et_yottametre",
+        "Zettametres" to "et_zettametre",
+        "Exametres" to "et_exametre",
+        "Petametres" to "et_petametre",
+        "Terametres" to "et_terametre",
+        "Gigametres" to "et_gigametre",
+        "Megametres" to "et_megametre",
+        "Kilometres" to "et_kilometre",
+        "Hectometres" to "et_hectometre",
+        "Decametres" to "et_decametre",
+        "Decimetres" to "et_decimetre",
+        "Centimetres" to "et_centimetre",
+        "Millimetres" to "et_millimetre",
+        "Micrometres" to "et_micrometre",
+        "Nanometres" to "et_nanometre",
+        "Picometres" to "et_picometre",
+        "Femtometres" to "et_femtometre",
+        "Attometres" to "et_attometre",
+        "Zeptometres" to "et_zeptometre",
+        "Yoctometres" to "et_yoctometre"
+    )
     fun getFilteredUnits(): List<String> {
         return units.subList(lower, upper + 1)
     }
@@ -43,6 +69,11 @@ class MetricsData(context: Context, private val lower: Int, private val upper: I
     fun convertFromMetres(value: Double): List<Double> {
         return getFilteredUnits().map { unit ->
             conversionFactors[unit]?.times(value) ?: value
+        }
+    }
+    fun convertToEtId(name: String): List<String>{
+        return getFilteredUnits().map { unit ->
+            etId[unit]?: "default"
         }
     }
 }
