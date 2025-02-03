@@ -2,13 +2,13 @@ package ru.myitschool.lab23
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import ru.myitschool.lab23.databinding.ActivityMainBinding
+import java.util.Random
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var viewModel : MyViewModel
+    private lateinit var viewModel : MyViewModel
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,20 +16,18 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel = ViewModelProvider(this).get(MyViewModel::class.java)
         observeViewModel()
-        binding.content.getRandomNum.setOnClickListener{
-            viewModel.result.value = viewModel.generateLogNormal()
-        }
+        initView()
     }
     fun observeViewModel(){
-        viewModel.mu.observe(this, Observer{
-            binding.content.meanVal.setText(it.toString())
-        })
-        viewModel.sigma2.observe(this, Observer{
-            binding.content.varianceValue.setText(it.toString())
-        })
-        viewModel.result.observe(this, Observer{
+        viewModel.result.observe(this) {
             binding.content.randomNumberResult.text = it.toString()
-        })
-
+        }
+    }
+    fun initView(){
+        binding.content.getRandomNum.setOnClickListener{
+            val mu = binding.content.meanVal.text.toString().toDouble()
+            val sigma2 = binding.content.varianceValue.text.toString().toDouble()
+            viewModel.setValue(Math.exp(Math.sqrt(sigma2) * Random().nextGaussian() + mu))
+        }
     }
 }
