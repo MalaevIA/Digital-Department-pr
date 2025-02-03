@@ -6,8 +6,8 @@ import kotlin.math.exp
 import kotlin.math.sqrt
 
 class MyViewModel : ViewModel() {
-    val mu = MutableLiveData<Double>().apply { value = 0.0 }
-    val sigma2 = MutableLiveData<Double>().apply { value = 1.0 }
+    val mu = MutableLiveData<Double>()
+    val sigma2 = MutableLiveData<Double>()
     val result = MutableLiveData<Double>()
     fun generateLogNormal(): Double {
         val sigma = sqrt((sigma2.value ?: 1.0))
