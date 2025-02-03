@@ -7,33 +7,40 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/main_padding"
+        android:id="@+id/score_text"
+        android:text="0"
+        android:gravity="center"
+        />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:contentDescription="@string/app_name"
         android:layout_margin="@dimen/main_padding"
         />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:id="@+id/button2"
         android:contentDescription="@string/app_name"
         android:layout_margin="@dimen/main_padding"
         android:layout_gravity="bottom"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:contentDescription="@string/app_name"
         android:layout_margin="@dimen/main_padding"
         android:layout_gravity="end"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:contentDescription="@string/app_name"
         android:layout_margin="@dimen/main_padding"
         android:layout_gravity="end|bottom"/>
-
 </FrameLayout>
