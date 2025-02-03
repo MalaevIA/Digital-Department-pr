@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             binding.content.varianceValue.setText(it.toString())
         })
         viewModel.result.observe(this, Observer{
-            binding.content.randomValueResult.text = it.toString()
+            binding.content.randomNumberResult.text = it.toString()
         })
 
     }
