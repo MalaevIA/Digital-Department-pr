@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding.content.showAction.setOnClickListener{
             binding.content.summaryText.apply {
                 val checkedStates = listOf(
-                    binding.content.chipMaterial?.let { "canonicalname1:${it.isChecked}" },
+                    binding.content.chipMaterial?.let { "com.google.android.material.chip.Chip:${it.isChecked}" },
                 ).filterNotNull().joinToString()
                 text = checkedStates
             }
