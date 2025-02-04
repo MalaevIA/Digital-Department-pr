@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
             binding.content.summaryText.apply {
                 val checkedStates = listOf(
                     binding.content.chipMaterial?.let { "com.google.android.material.chip.Chip:${it.isChecked}" },
+                    binding.content.checkBoxMaterial?.let { "com.google.android.material.checkbox.MaterialCheckBox:${it.isChecked}" },
+                    binding.content.switchMaterial?.let { "com.google.android.material.switchmaterial.SwitchMaterial:${it.isChecked}" },
+                    binding.content.toggleButton?.let { "androidx.appcompat.widget.AppCompatToggleButton:${it.isChecked}" }
                 ).filterNotNull().joinToString()
                 text = checkedStates
             }
