@@ -31,17 +31,25 @@ class MainActivity : AppCompatActivity() {
         val maxValueFilter = InputFilter { source, start, end, dest, dstart, dend ->
             try {
                 val input = dest.toString().substring(0, dstart) + source.toString() + dest.toString().substring(dend)
-                if (input.toLong() < 10_000_000_000_000) {
-                    null // Разрешаем ввод, если значение меньше 10^12
+
+                // Разрешаем пустой ввод (удаление текста)
+                if (input.isEmpty() || input == "-") return@InputFilter null
+
+                // Преобразуем в Double для поддержки десятичных чисел
+                val value = input.toDouble()
+
+                // Ограничение по модулю |value| < 10¹²
+                if (value > -1_000_000_000_000 && value < 1_000_000_000_000) {
+                    null // Разрешаем ввод
                 } else {
-                    // Отказываемся от ввода, если значение больше или равно 10^12
-                    Toast.makeText(this, "Число должно быть меньше 10^12", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Число должно быть в пределах ±10¹²", Toast.LENGTH_SHORT).show()
                     ""
                 }
             } catch (e: NumberFormatException) {
                 "" // Возвращаем пустую строку, если ввод не является числом
             }
         }
+
 
         // Применяем фильтр к EditText
         binding.container.sideA.filters = arrayOf(maxValueFilter)

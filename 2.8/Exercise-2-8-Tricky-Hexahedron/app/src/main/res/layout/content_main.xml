@@ -15,7 +15,7 @@
         android:layout_marginEnd="60dp"
         android:text="@string/side_a_text"
         android:textColor="#000000"
-        android:inputType="number"
+        android:inputType="text"
         android:background="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/side_a"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         android:hint="side_a"
         android:textColor="#000000"
         android:background="#FFFFFF"
-        android:inputType="text"
+        android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/side_b"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -55,7 +55,7 @@
         android:hint="side_b"
         android:textColor="#000000"
         android:background="#FFFFFF"
-        android:inputType="text"
+        android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/side_c"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -80,7 +80,7 @@
         android:hint="side_c"
         android:textColor="#000000"
         android:background="#FFFFFF"
-        android:inputType="text"
+        android:inputType="numberDecimal|numberSigned"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
