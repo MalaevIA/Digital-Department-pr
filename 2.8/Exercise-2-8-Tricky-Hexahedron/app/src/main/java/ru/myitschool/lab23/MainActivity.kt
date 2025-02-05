@@ -25,21 +25,31 @@ class MainActivity : AppCompatActivity() {
         binding.container.spinner.adapter = adapter
         binding.container.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                val a = binding.container.sideA.text.toString().toDoubleOrNull()?:0.0
-                val b = binding.container.sideB.text.toString().toDoubleOrNull()?:0.0
-                val c = binding.container.sideC.text.toString().toDoubleOrNull()?:0.0
+
                 when(position){
 
                     0-> btnCalc.setOnClickListener{
+                        val a = binding.container.sideA.text.toString().toDoubleOrNull()?:0.0
+                        val b = binding.container.sideB.text.toString().toDoubleOrNull()?:0.0
+                        val c = binding.container.sideC.text.toString().toDoubleOrNull()?:0.0
                         res.text = sumP(a,b,c)
                     }
                     1-> btnCalc.setOnClickListener{
+                        val a = binding.container.sideA.text.toString().toDoubleOrNull()?:0.0
+                        val b = binding.container.sideB.text.toString().toDoubleOrNull()?:0.0
+                        val c = binding.container.sideC.text.toString().toDoubleOrNull()?:0.0
                         res.text = lengthP(a,b,c)
                     }
                     2-> btnCalc.setOnClickListener {
+                        val a = binding.container.sideA.text.toString().toDoubleOrNull()?:0.0
+                        val b = binding.container.sideB.text.toString().toDoubleOrNull()?:0.0
+                        val c = binding.container.sideC.text.toString().toDoubleOrNull()?:0.0
                         res.text = squareP(a,b,c)
                     }
                     3-> btnCalc.setOnClickListener {
+                        val a = binding.container.sideA.text.toString().toDoubleOrNull()?:0.0
+                        val b = binding.container.sideB.text.toString().toDoubleOrNull()?:0.0
+                        val c = binding.container.sideC.text.toString().toDoubleOrNull()?:0.0
                         res.text = volumeP(a,b,c)
                     }
                 }

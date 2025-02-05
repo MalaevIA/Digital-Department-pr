@@ -14,6 +14,9 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="60dp"
         android:text="@string/side_a_text"
+        android:textColor="#000000"
+        android:inputType="number"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/side_a"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="28dp"
-        android:background="@color/white"
         android:ems="10"
         android:hint="side_a"
-
+        android:textColor="#000000"
+        android:background="#FFFFFF"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/side_b"
@@ -48,9 +51,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/white"
         android:ems="10"
         android:hint="side_b"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/side_c"
@@ -72,9 +76,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="184dp"
         android:layout_marginEnd="12dp"
-        android:background="@color/white"
         android:ems="10"
         android:hint="side_c"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
         android:inputType="text"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,20 +105,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.401" />
 
-    <View
+    <Button
         android:id="@+id/calculate"
         android:layout_width="201dp"
         android:layout_height="56dp"
-        android:background="@color/black"
         android:clickable="true"
         android:contentDescription="@string/app_name"
-        android:text=""
+        android:text="Посчитать"
+        android:textColor="#000000"
+        android:background="@color/white"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.519" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
