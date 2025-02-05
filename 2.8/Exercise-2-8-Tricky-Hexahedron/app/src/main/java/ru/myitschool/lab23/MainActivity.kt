@@ -1,9 +1,13 @@
 package ru.myitschool.lab23
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Bundle
+import android.text.InputFilter
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import ru.myitschool.lab23.databinding.ActivityMainBinding
 import kotlin.math.pow
@@ -23,6 +27,26 @@ class MainActivity : AppCompatActivity() {
         val res = binding.container.solution
         val btnCalc = binding.container.calculate
         binding.container.spinner.adapter = adapter
+        // Устанавливаем фильтр для ввода
+        val maxValueFilter = InputFilter { source, start, end, dest, dstart, dend ->
+            try {
+                val input = dest.toString().substring(0, dstart) + source.toString() + dest.toString().substring(dend)
+                if (input.toLong() < 10_000_000_000_000) {
+                    null // Разрешаем ввод, если значение меньше 10^12
+                } else {
+                    // Отказываемся от ввода, если значение больше или равно 10^12
+                    Toast.makeText(this, "Число должно быть меньше 10^12", Toast.LENGTH_SHORT).show()
+                    ""
+                }
+            } catch (e: NumberFormatException) {
+                "" // Возвращаем пустую строку, если ввод не является числом
+            }
+        }
+
+        // Применяем фильтр к EditText
+        binding.container.sideA.filters = arrayOf(maxValueFilter)
+        binding.container.sideB.filters = arrayOf(maxValueFilter)
+        binding.container.sideC.filters = arrayOf(maxValueFilter)
         binding.container.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
 
@@ -58,6 +82,13 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(p0: AdapterView<*>?) {
 
             }
+        }
+        binding.container.solution.setOnClickListener {
+            // Получаем текст элемента
+            val textToCopy = binding.container.solution.text.toString()
+            val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = ClipData.newPlainText("label", textToCopy)
+            clipboard.setPrimaryClip(clip)
         }
 
     }
