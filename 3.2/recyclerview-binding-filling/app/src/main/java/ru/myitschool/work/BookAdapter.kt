@@ -10,16 +10,28 @@ import ru.myitschool.work.databinding.ItemBookBinding
 
 class BookAdapter(private val bookList: List<Book>) : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
-    //TODO: Реализовать класс BookViewHolder, используя binding
+    class BookViewHolder(val binding: ItemBookBinding) : RecyclerView.ViewHolder(binding.root) {//аналог item view из лекции описыввет экземпляр каждого элемента на я подключил viewbinding
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
-        val inflater = LayoutInflater.from(parent.context)
-        val binding = ItemBookBinding.inflate(inflater, parent, false)
+        val binding = ItemBookBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
         return BookViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        //TODO: Заполнить элемент списка данными дата класса. Нечетные блоки информации должны быть прижаты вправо
+        if (position % 2 == 0){
+            holder.binding.bookTitle.text = bookList[position].title
+            holder.binding.bookAuthor.text = bookList[position].author
+        }
+        else{
+            holder.binding.infoContainer.gravity = Gravity.END
+            holder.binding.bookTitle.text = bookList[position].title
+            holder.binding.bookAuthor.text = bookList[position].author
+        }
     }
 
     override fun getItemCount() = bookList.size
