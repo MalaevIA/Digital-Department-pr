@@ -7,12 +7,12 @@ val packageName = "ru.myitschool.work"
 
 android {
     namespace = packageName
-    compileSdk = 33 // Или заменить, если `Version.Android.Sdk.compile` реально существует
+    compileSdk = 34 // Или заменить, если `Version.Android.Sdk.compile` реально существует
 
     defaultConfig {
         applicationId = packageName
         minSdk = 21 // Или заменить на `Version.Android.Sdk.min`, если он есть
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
