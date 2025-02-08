@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Video capture</string>
+    <string name="get_video">Capture</string>
+</resources>
