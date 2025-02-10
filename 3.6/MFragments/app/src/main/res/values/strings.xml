@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Simultaneous Series</string>
+    <string name="check_ui">Check UI</string>
+    <string name="property">Some property here</string>
+    <string name="first_fragment">First Fragment</string>
+    <string name="proceeding_fragment">Proceeding Fragment</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="settings">Settings</string>
+    <string name="tips">Tips</string>
+</resources>
