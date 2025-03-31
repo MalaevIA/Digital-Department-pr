@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "ru.myitschool.mte.app-mergeDebugResources-35:/layout/activity_main.xml",
+        "source": "ru.myitschool.mte.app-main-38:/layout/activity_main.xml"
+    },
+    {
+        "merged": "ru.myitschool.mte.app-mergeDebugResources-35:/layout/fragment_first.xml",
+        "source": "ru.myitschool.mte.app-main-38:/layout/fragment_first.xml"
+    },
+    {
+        "merged": "ru.myitschool.mte.app-mergeDebugResources-35:/layout/fragment_proceeding.xml",
+        "source": "ru.myitschool.mte.app-main-38:/layout/fragment_proceeding.xml"
+    },
+    {
+        "merged": "ru.myitschool.mte.app-mergeDebugResources-35:/layout/content_main.xml",
+        "source": "ru.myitschool.mte.app-main-38:/layout/content_main.xml"
+    },
+    {
+        "merged": "ru.myitschool.mte.app-mergeDebugResources-35:/layout/additional_options.xml",
+        "source": "ru.myitschool.mte.app-main-38:/layout/additional_options.xml"
+    }
+]
